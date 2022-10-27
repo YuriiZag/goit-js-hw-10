@@ -19,7 +19,7 @@ refs.input.addEventListener('input', debounce(onChange, DEBOUNCE_DELAY))
 function onChange(e) {
     htmlClear();
     let countryName = e.target.value.trim();
-    if (e.target.value !== '') {
+    if (countryName!== '') {
         countryApiSearch(countryName)
             .then(country => createList(country))
             .catch(error => {
